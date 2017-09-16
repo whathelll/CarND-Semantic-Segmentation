@@ -101,3 +101,10 @@ ENV/
 .mypy_cache/
 
 RUNS/
+
+#idea
+.idea
+
+
+# data
+data
