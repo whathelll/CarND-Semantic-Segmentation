@@ -163,7 +163,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     for e in range(epochs):
         i = 0
         lr = next(lr_gen)
-        print('=====running batch: {} with lr: {}'.format(e, lr))
+        print('=====running epoch: {} with lr: {}'.format(e, lr))
         for image, label in get_batches_fn(batch_size):
         # generator = get_batches_fn(batch_size)
         # image, label = next(generator)
@@ -180,7 +180,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
             if i % 5 == 0:
                 print('loss:{}'.format(loss))
 
- 
+
 
     # sess.run([train_op], {correct_label: np.arange(np.prod(shape)).reshape(shape), learning_rate: 10})
     # test, loss = sess.run([layers_output, cross_entropy_loss], {correct_label: np.arange(np.prod(shape)).reshape(shape)})
@@ -190,7 +190,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
 
 def run():
     epochs = 50
-    batch_size = 6
+    batch_size = 10
     num_classes = 2
     image_shape = (160, 576)
     data_dir = './data'
